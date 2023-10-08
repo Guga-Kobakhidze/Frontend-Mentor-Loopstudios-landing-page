@@ -1,0 +1,113 @@
+/* max width -> 1270px */
+
+@media screen and (max-width: 1270px) {
+  .interactive_content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .right_content {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+/* max width -> 1023px */
+
+@media screen and (max-width: 1023px) {
+  .header-menu {
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: var(--pre-max);
+    height: 100vh;
+    background-color: var(--dark-color);
+    padding: 200px 0 0 5%;
+    z-index: 10;
+    transition: 0.3s;
+  }
+  .header-menu .navigation {
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+  }
+  .header-menu .navigation a {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: var(--small-w3);
+    font-family: var(--josefin-ff);
+  }
+  .header-menu .navigation a:hover::before,
+  .header-menu .navigation a:focus::before {
+    width: 0;
+    height: 0;
+  }
+  .close_btn {
+    display: block;
+    position: absolute;
+    z-index: var(--z-index-max);
+    top: 0;
+    right: 5%;
+    padding-top: 50px;
+  }
+  .nav__toggle {
+    display: block;
+    z-index: 0;
+  }
+  .show-menu {
+    left: 0;
+    transition: 0.3s;
+  }
+  .creation_cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* max width -> 815px */
+
+@media screen and (max-width: 815px) {
+  .creation_cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card_content {
+    bottom: 15px;
+    left: 20px;
+  }
+  .footer_section {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .footer_menu {
+    align-items: center;
+    gap: 30px;
+  }
+  .footer_menu .navigation {
+    flex-direction: column;
+  }
+  .footer_social .socials {
+    align-self: center;
+  }
+}
+
+/* max width -> 640px */
+
+@media screen and (max-width: 640px) {
+  .creation_cards {
+    grid-template-columns: 1fr;
+  }
+  .creation_cards .card .mobile,
+  .btn-mobile {
+    display: flex;
+  }
+  .creation_cards .card .desktop,
+  .btn {
+    display: none;
+  }
+  .creation_title {
+    justify-content: center;
+  }
+}
